@@ -1,0 +1,10 @@
+<h2>Post archives</h2>
+<br>
+
+{% for post in objss %}
+    <div>
+        <div><h3><a href="{% url 'blog_post_detail' post.slug %}">{{ post.title }}</a></h3></div>
+        <div>{{ post.text }}</div><br>
+    </div>
+    
+{% endfor %}
