@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import view_post, add_post, PostMonthArchiveView, PostWeekArchiveView
+from .views import *
 
 
 urlpatterns = [
@@ -7,5 +7,6 @@ urlpatterns = [
     path('add/post', add_post, name='blog_add_post'),
     path('archive/<int:year>/month/<int:month>', PostMonthArchiveView.as_view(month_format='%m'), name='blog_archive_month',),
     path('archive/<int:year>/week/<int:week>', PostWeekArchiveView.as_view(), name='blog_archive_week'),
+    path('post', AllPostView, name='allpost'),
         ]
 

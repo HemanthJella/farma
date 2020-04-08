@@ -3,6 +3,7 @@
 from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import redirect, render_to_response, get_object_or_404, render
 from django.views.generic.dates import MonthArchiveView, WeekArchiveView
+from django.views.generic.edit import FormView
 
 from .models import Post
 from .forms import PostForm, CommentForm
@@ -33,10 +34,19 @@ def view_post(request, slug):
     form.initial['website'] = request.session.get('website')
     return render(request, 'blog/blog_post.html',{'post': post,'form': form,})
 
+
+def AllPostView(request):
+    context = {}
+    objss = Post.objects.all()
+    context['objss'] = objss
+    return render(request, 'blog/allpost.html', context)
+   
+
 class PostMonthArchiveView(MonthArchiveView):
     queryset = Post.objects.all()
     date_field = "created_on"
     allow_future = True
+
 
 class PostWeekArchiveView(WeekArchiveView):
     queryset = Post.objects.all()
