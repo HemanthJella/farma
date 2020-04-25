@@ -1,26 +1,5 @@
-First do this:
+Farmer Friendly Portal
 
-	clone repo
-	cd djenofdjango
+Tools & Technologies: Django, HTML, CSS, Bootstrap, PayPal, Machine Learning, Computer Vision.
 
-We have 2 apps in the 'apps' folder, so,
-
-	cd djen_project 
-		- For articles section
-
-	cd quora 
-		- For Q/A section
-
-	(need to run each one seperately)
-
-
-Now within 'djen_project', the article posting app is 'blog'
-	
-	where one can post an article and others can post comments to it
-
-
-
-And within 'quora' , q/a app is 'core'
-
-	where it only shows the questions added(as of now)
-	
+A Farmer friendly portal where one writes articles or can ask and answer the queries regarding agriculture. It also includes Crop disease prediction	
