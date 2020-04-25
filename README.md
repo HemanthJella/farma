@@ -1,4 +1,4 @@
-#Farma
+# Farma
 Farmer Friendly Portal
 
 Tools & Technologies: Django, HTML, CSS, Bootstrap, PayPal, Machine Learning, Computer Vision.
